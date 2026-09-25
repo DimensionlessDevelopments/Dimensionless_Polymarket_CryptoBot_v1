@@ -205,12 +205,11 @@ source venv/bin/activate
 pip install py-clob-client-v2 requests numpy matplotlib seaborn
 jupyter notebook polymarket_bot.ipynb   
 
-
+```
 **Built with ❤️ for quantitative trading research**
 # Dimensionless Polymarket Crypto Bot
 
 ---
-
 
 ## Contact
 **Made by Dimensionless Developments**
