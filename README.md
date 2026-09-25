@@ -2,7 +2,7 @@
 Polymarket Contrarian Crypto Bot V1 is an interactive Jupyter notebook that walks through prediction market of Polymarket. It keeps the original goal; scan crypto markets, inspect order book structure, compute a contrarian z-score signal, and place trades; but is designed for manual exploration and research rather than unattended execution.
 
 
-# Polymarket Contrarian Crypto Bot V1 (Notebook)
+## Polymarket Contrarian Crypto Bot V1 (Notebook)
 
 V1 is an interactive Jupyter notebook that walks through Polymarket's Gamma API and CLOB V2 API step by step. It keeps the original goal—scan crypto markets, inspect order book structure, compute a contrarian z-score signal, and place trades—but is designed for **manual exploration and research** rather than unattended execution.
 
