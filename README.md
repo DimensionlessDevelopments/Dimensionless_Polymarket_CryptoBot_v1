@@ -4,11 +4,80 @@ Polymarket Contrarian Crypto Bot V1 is an interactive Jupyter notebook that walk
 
 # Polymarket Contrarian Crypto Bot V1 (Notebook)
 
-V1 is an interactive Jupyter notebook that walks through Polymarket's Gamma API and CLOB V2 API step by step. It keeps the original goal; scan crypto markets, inspect order book structure, compute a contrarian z-score signal, and place trades but is designed for **manual exploration and research** rather than unattended execution.
+V1 is an interactive Jupyter notebook that walks through Polymarket's Gamma API and CLOB V2 API step by step. It keeps the original goal—scan crypto markets, inspect order book structure, compute a contrarian z-score signal, and place trades—but is designed for **manual exploration and research** rather than unattended execution.
 
 ## Current integration choices
 
 The code targets `py-clob-client-v2` (the official CLOB SDK) alongside raw `requests` calls to the Gamma API for market discovery. The SDK exposes order book reads, midpoint/spread queries, authenticated order placement (FOK market and GTC limit), balance/allowance reads, and open-order management. Analytics use NumPy for computation, Matplotlib for rendering, and Seaborn for styling.
+
+## Install
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install py-clob-client-v2 requests numpy matplotlib seaborn
+jupyter notebook polymarket_bot.ipynb
+```
+
+## Quickstart
+
+### Prerequisites
+
+- Python 3.10+
+- pip
+- Jupyter Notebook
+- Windows, macOS, or Linux
+
+### Clone & Run
+
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd poly
+
+# Create and activate a virtual environment
+python -m venv .venv
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+
+# macOS/Linux
+source .venv/bin/activate
+
+# Install dependencies
+pip install py-clob-client-v2 requests numpy matplotlib seaborn
+
+# Launch the notebook
+jupyter notebook poly1.ipynb
+```
+
+The notebook opens in your browser. Run cells from top to bottom.
+
+### Usage
+1. Run the setup and imports cells.
+2. Run market discovery to pull active markets from Gamma API.
+3. Run analytics cells to generate charts in the `analysis` folder.
+4. Select a market and run order book analysis.
+5. For trading actions, fill in wallet credentials in the authentication section before running order cells.
+
+**Example Output:**
+
+```text
+Found 80 markets
+
+Question: Will BTC be above $70k at month end?
+	Volume 24h: $1,245,000
+	Liquidity: $328,000
+	Prices: ["0.61", "0.39"]
+
+Best Bid: 0.6000
+Best Ask: 0.6200
+Midpoint: 0.6100
+Spread (abs): 0.0200
+Spread (rel): 3.28%
+
+Saved: analysis/volume_liquidity_scatter.png
+```
 
 ## What the notebook covers
 
