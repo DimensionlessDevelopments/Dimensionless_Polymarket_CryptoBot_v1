@@ -32,7 +32,7 @@ jupyter notebook polymarket_bot.ipynb
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/DimensionlessDevelopments/Dimensionless_Polymarket_CryptoBot_v1.git
 cd poly
 
 # Create and activate a virtual environment
